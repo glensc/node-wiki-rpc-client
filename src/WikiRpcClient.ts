@@ -14,6 +14,21 @@ export class WikiRpcClient {
     this.client = this.createClient(this.url, options);
   }
 
+  public static create<T>(
+    url: string,
+    options: Options = {},
+  ): T {
+    const client = new WikiRpcClient(url, options);
+
+    return new Proxy<WikiRpcClient>(client, client) as T;
+  }
+
+  public get(target: object, methodName: string) {
+    return (...params: string[]): any => {
+      return this.call(methodName, params);
+    };
+  }
+
   public async call<T extends XmlRpcValue>(methodName: string, params: XmlRpcValue[] = []): Promise<T> {
     return await this.client.methodCall(methodName, params) as T;
   }
