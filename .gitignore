@@ -1,0 +1,7 @@
+/.envrc.local
+/.idea/
+/.semver
+/node_modules
+/src/**/*.d.ts
+/src/**/*.js
+/yarn-error.log
