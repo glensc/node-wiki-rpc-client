@@ -37,7 +37,7 @@ jobs:
           APP_VERSION: ${{ steps.vars.outputs.version }}
 
       - name: Publish
-        run: npm publish --access public
+        run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
