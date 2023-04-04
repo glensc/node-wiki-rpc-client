@@ -35,7 +35,7 @@ export class WikiRpcClient {
       href,
     } = new URL(url);
 
-    const isSecure = protocol == "https:";
+    const isSecure = protocol === "https:";
     const factory = isSecure ? xmlrpc.createSecureClient : xmlrpc.createClient;
 
     return factory({
