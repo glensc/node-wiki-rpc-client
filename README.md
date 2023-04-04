@@ -1,6 +1,6 @@
 # Client for Wiki RPC Interface 2.0
 
-TypeScrpt client for [Wiki RPC Interface 2.0][1] ([web.archive.org][2]).
+TypeScript client for [Wiki RPC Interface 2.0][1] ([web.archive.org][2]).
 
 This is the [Remote API interface][3] that [Dokuwiki][4] implements.
 
