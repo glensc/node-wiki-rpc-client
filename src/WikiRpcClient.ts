@@ -21,7 +21,7 @@ export class WikiRpcClient {
     const client = new WikiRpcClient(url, options);
 
     return new Proxy<WikiRpcClient>(client, {
-      get(target: object, methodName: string) {
+      get(target: never, methodName: string) {
         return (...params: string[]): any => {
           return client.call(methodName, params);
         };
