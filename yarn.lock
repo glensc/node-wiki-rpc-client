@@ -98,13 +98,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.42.tgz#fa39b2dc8e0eba61bdf51c66502f84e23b66e114"
   integrity sha512-xefu+RBie4xWlK8hwAzGh3npDz/4VhF6icY/shU+zv/1fNn+ZVG7T7CRwe9LId9sAYRPxI+59QBPuKL3WpyGRg==
 
-"@types/xmlrpc@^1.3.7":
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/@types/xmlrpc/-/xmlrpc-1.3.7.tgz#a95e8636fe9b848772088cfaa8021d0ad0ad99a0"
-  integrity sha512-T+jYEZz/dJvI40dkqx/FNNkyyWDyOb0HgQDpni48r4NyB8n7xjKFDACi8O3NkAWz5cLWEmKRzWfzCEZ5EB6CVg==
-  dependencies:
-    "@types/node" "*"
-
 acorn-walk@^8.1.1:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.2.0.tgz#741210f2e2426454508853a2f44d0ab83b7f69c1"
@@ -194,7 +187,7 @@ node-fetch@^3.3.0:
     fetch-blob "^3.1.4"
     formdata-polyfill "^4.0.10"
 
-sax@1.2.x, sax@^1.2.4:
+sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -248,19 +241,6 @@ xmlbuilder2@^3.0.2:
     "@oozcitak/util" "8.3.8"
     "@types/node" "*"
     js-yaml "3.14.0"
-
-xmlbuilder@8.2.x:
-  version "8.2.2"
-  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-8.2.2.tgz#69248673410b4ba42e1a6136551d2922335aa773"
-  integrity sha512-eKRAFz04jghooy8muekqzo8uCSVNeyRedbuJrp0fovbLIi7wlsYtdUn3vBAAPq2Y3/0xMz2WMEUQ8yhVVO9Stw==
-
-xmlrpc@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/xmlrpc/-/xmlrpc-1.3.2.tgz#26b2ea347848d028aac7e7514b5351976de3e83d"
-  integrity sha512-jQf5gbrP6wvzN71fgkcPPkF4bF/Wyovd7Xdff8d6/ihxYmgETQYSuTc+Hl+tsh/jmgPLro/Aro48LMFlIyEKKQ==
-  dependencies:
-    sax "1.2.x"
-    xmlbuilder "8.2.x"
 
 yn@3.1.1:
   version "3.1.1"
