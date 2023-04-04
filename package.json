@@ -1,5 +1,6 @@
 {
   "name": "@glen/wiki-rpc-client",
+  "repository": "https://github.com/glensc/node-wiki-rpc-client",
   "author": "Elan Ruusamäe <glen@delfi.ee>",
   "keywords": [
     "dokuwiki rpc client",
