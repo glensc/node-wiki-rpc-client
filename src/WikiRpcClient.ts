@@ -15,7 +15,7 @@ export class WikiRpcClient {
     this.client = this.createClient(this.url, options);
   }
 
-  public async call<P, R>(methodName: string, params: P[] = []): Promise<R> {
+  public async call<R>(methodName: string, params: unknown[] = []): Promise<R> {
     return new Promise<R>((resolve, reject) => {
       this.client.methodCall(methodName, params, (error, value) => {
         if (error) {
