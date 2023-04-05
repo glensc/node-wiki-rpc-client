@@ -14,8 +14,8 @@ export class WikiRpcClient {
     this.client = this.createClient(this.url, options);
   }
 
-  public async call(methodName: string, params: XmlRpcValue[] = []): Promise<XmlRpcValue> {
-    return await this.client.methodCall(methodName, params);
+  public async call<T extends XmlRpcValue>(methodName: string, params: XmlRpcValue[] = []): Promise<T> {
+    return await this.client.methodCall(methodName, params) as T;
   }
 
   private createClient(url: string, options: Options): XmlRpcClient {
