@@ -1,5 +1,6 @@
-import { Options } from "./Options";
 import { XmlRpcClient, XmlRpcValue } from "@foxglove/xmlrpc";
+
+import { Options } from "./Options";
 
 /**
  * This is generic Wiki RPC Interface 2.0 client.
@@ -46,6 +47,7 @@ export class WikiRpcClient {
 
     const { user, pass } = options.basic_auth;
     const encoded = Buffer.from(user + ":" + pass).toString("base64");
+
     return {
       Authorization: "Basic " + encoded,
     };
