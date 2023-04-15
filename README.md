@@ -23,3 +23,21 @@ const main = async () => {
 
 main().catch((e: Error) => console.error(e));
 ```
+
+Additionally, you can create client proxy and specify function signatures
+
+```ts
+import { WikiRpcClient, DokuwikiService, WikiRpcClient } from "@glen/wiki-rpc-client";
+
+// create client proxy with DokuwikiService service definitions
+const client = WikiRpcClient.create<DokuwikiService>(url);
+
+// the services can be combined as well:
+const client = WikiRpcClient.create<WikiService & DokuwikiService>(url);
+
+const dwVersion = await client["dokuwiki.getVersion"]();
+console.log(dwVersion);
+
+const data = await client["wiki.getPage"]("start");
+console.log(data);
+```
