@@ -28,7 +28,7 @@ export interface WikiService {
    *
    * @return raw Wiki text
    */
-  ["wiki.getPage"](pagename: string, timestamp: number): Promise<string>;
+  ["wiki.getPage"](pagename: string, timestamp?: number): Promise<string>;
 
   /**
    * Returns the raw Wiki text for a specific revision of a Wiki page.
