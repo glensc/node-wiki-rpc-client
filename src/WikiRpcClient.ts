@@ -41,6 +41,12 @@ export class WikiRpcClient {
   }
 
   private createHeaders(options: Options) {
+    if (options.bearer_auth) {
+      return {
+        Authorization: "Bearer " + options.bearer_auth,
+      };
+    }
+
     if (!options.basic_auth) {
       return undefined;
     }
