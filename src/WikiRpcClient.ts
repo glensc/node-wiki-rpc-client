@@ -40,7 +40,7 @@ export class WikiRpcClient {
     return new XmlRpcClient(url, { headers });
   }
 
-  private createHeaders(options: Options) {
+  private createHeaders(options: Options): { Authorization: string } | undefined {
     if (options.bearer_auth) {
       return {
         Authorization: "Bearer " + options.bearer_auth,
