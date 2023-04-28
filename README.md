@@ -44,3 +44,25 @@ console.log(dwVersion);
 const data = await client["wiki.getPage"]("start");
 console.log(data);
 ```
+
+## Authentication
+
+For Dokuwiki you can pass username and password via options:
+
+```ts
+const options = {
+    basic_auth: {
+        user: "glen",
+        pass: String(process.env.WIKI_PASSWORD),
+    },
+};
+```
+
+Dokuwiki has upcoming support for JWT authentication:
+- https://github.com/dokuwiki/dokuwiki/pull/2432
+
+```ts
+const options = {
+    bearer_auth: String(process.env.WIKI_TOKEN),
+};
+```
